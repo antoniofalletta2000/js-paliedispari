@@ -23,36 +23,36 @@ Se sì, di che tipo? */
 
 //PALINDROMA
 
-//chiediamo all'user di scrivere una parola in minuscolo
- const word = prompt("type a word in lowercase")
-console.log(word);
+    //chiediamo all'user di scrivere una parola in minuscolo
+    const word = prompt("type a word in lowercase")
+    console.log(word);
 
-//apriamo una funzione chiamata itsPalindrome il cui parametro è la parola scritta dall'user
-function itsPalindrome(word) {
-    //creiamo una variabile che ci servirà per metterci la parola al contrario
-    let reversedWord = ""
-    
-    //apriamo un ciclo for che leggerà al contrario la parola dell'user
-    for (let i = word.length - 1; i >= 0; i--) {
-        //creiamo una variabile per associare gli index della parola
-        const char = word[i]
-        //scriviamo che la variabile della parola al contrario è data dalla somma di se stessa e degli indici della parola dell'user
-        reversedWord += char  
+    //apriamo una funzione chiamata itsPalindrome il cui parametro è la parola scritta dall'user
+    function itsPalindrome(word) {
+        //creiamo una variabile che ci servirà per metterci la parola al contrario
+        let reversedWord = ""
+        
+        //apriamo un ciclo for che leggerà al contrario la parola dell'user
+        for (let i = word.length - 1; i >= 0; i--) {
+            //creiamo una variabile per associare gli index della parola 
+            const char = word[i]
+            //scriviamo che la variabile della parola al contrario è data dalla somma di se stessa e degli indici della parola dell'user
+            reversedWord += char  
+        } 
+        //SE la parola dell'user è uguale a se stessa al contrario
+        if (reversedWord===word){
+            //ALLORA mi ritornerà il valore booleano true
+            return true
+        }
+        //ALTRIMENTI
+        else {
+            //mi ritornerà il valore booleano false
+            return false
+        }
+        
     } 
-    //SE la parola dell'user è uguale a se stessa al contrario
-    if (reversedWord===word){
-        //ALLORA mi ritornerà il valore booleano true
-        return true
-    }
-    //ALTRIMENTI
-    else {
-        //mi ritornerà il valore booleano false
-        return false
-    }
-    
-} 
-    //stampiamo il risultato della funzione
-    console.log(itsPalindrome(word));
+     //stampiamo il risultato della funzione
+     console.log(itsPalindrome(word));
     
 
 
@@ -89,17 +89,17 @@ console.log(totalSum);
 if (totalSum % 2 === 0 && user_choice==="even"){
     //ALLORA
     console.log("sum is even");
-    console.log("user win");
+    console.log("You win!!!👌");
 }
 //SE la somma è dispari E la scelta dell'utente è odd
 else if (totalSum % 2 !== 0 && user_choice==="odd") {
     //ALLORA
     console.log("sum is odd");
-    console.log("user win");
+    console.log("You win!!!👌");
 }
 //ALTRIMENTI
 else {
-    console.log("pc win");
+    console.log("ohhh...you lose😒");
 }
 
 
