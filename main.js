@@ -35,8 +35,16 @@ function itsPalindrome(word) {
         //scriviamo che la variabile della parola al contrario è data dalla somma di se stessa e degli indici della parola dell'user
         reversedWord += char  
     } 
-    //finiamo con un return che ci darà un valore booleano (true o false) che dipenderà se la parola dell'user è uguale, in tutto e per tutto, alla parola stessa al contrario
-    return reversedWord===word
+    //SE la parola dell'user è uguale a se stessa al contrario
+    if (reversedWord===word){
+        //ALLORA mi ritornerà il valore booleano true
+        return true
+    }
+    //ALTRIMENTI
+    else {
+        //mi ritornerà il valore booleano false
+        return false
+    }
     
 } 
     //stampiamo il risultato della funzione
